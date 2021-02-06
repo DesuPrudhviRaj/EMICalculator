@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import *
 def calculateEMI():
-    #print(loanAmountEntry.get(),loanTenureEntry.get(),loanROIEntry.get())
     totalAmount = float(loanAmountEntry.get()) * (pow((1 + float(loanROIEntry.get()) / 100), float(loanTenureEntry.get())))
     emi = int(totalAmount / (float(loanTenureEntry.get()) * 12))
     Label(window,text = "emi in rupees").grid(row=20, column=0)
